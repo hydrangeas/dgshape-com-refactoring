@@ -1,12 +1,6 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShop, faCircleQuestion } from "@fortawesome/free-solid-svg-icons";
-import {
-  faYoutube,
-  faInstagram,
-  faTwitter,
-  faFacebookF,
-} from "@fortawesome/free-brands-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { News } from "@/components/news";
 
@@ -93,7 +87,7 @@ export default function Home() {
         <div className="_item _agency">
           <a className="_link" href="#">
             <div className="_content">
-              <FontAwesomeIcon icon={faShop} />
+              <FontAwesomeIcon icon={faShop} size="2xl" />
               <header className="_title">代理店</header>
             </div>
           </a>
@@ -101,7 +95,7 @@ export default function Home() {
         <div className="_item _faq">
           <a className="_link" href="#">
             <div className="_content">
-              <FontAwesomeIcon icon={faCircleQuestion} />
+              <FontAwesomeIcon icon={faCircleQuestion} size="2xl" />
               <header className="_title">FAQ</header>
             </div>
           </a>
