@@ -1,8 +1,15 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { M_PLUS_1 } from "next/font/google";
-
 const mplus1 = M_PLUS_1({ subsets: ["latin"] });
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faYoutube,
+  faInstagram,
+  faTwitter,
+  faFacebookF,
+} from "@fortawesome/free-brands-svg-icons";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +23,117 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={mplus1.className}>{children}</body>
+      <body className={mplus1.className}>
+        <div className="nav">
+          <header className="_title">DGSHAPE</header>
+        </div>
+        {children}
+        <footer className="footer">
+          <div className="_container">
+            <div className="_nav">
+              <div className="_main">
+                <div className="_items">
+                  <div className="_item">
+                    <a href="#" className="_link">
+                      会社情報
+                    </a>
+                    <ul className="_list">
+                      <li className="_item">
+                        <a href="#" className="_link">
+                          会社概要
+                        </a>
+                      </li>
+                      <li className="_item">
+                        <a href="#" className="_link">
+                          事業拠点
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="_item">
+                    <a href="#" className="_link">
+                      ニュース
+                    </a>
+                    <ul className="_list">
+                      <li className="_item">
+                        <a href="#" className="_link">
+                          重要なお知らせ
+                        </a>
+                      </li>
+                      <li className="_item">
+                        <a href="#" className="_link">
+                          プレスリリース
+                        </a>
+                      </li>
+                      <li className="_item">
+                        <a href="#" className="_link">
+                          トピックス
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="_item">
+                    ポリシー
+                    <ul className="_list">
+                      <li className="_item">
+                        <a href="#" className="_link">
+                          アクセシビリティ
+                        </a>
+                      </li>
+                      <li className="_item">
+                        <a href="#" className="_link">
+                          プライバシーポリシー
+                        </a>
+                      </li>
+                      <li className="_item">
+                        <a href="#" className="_link">
+                          サイトご利用案内
+                        </a>
+                      </li>
+                      <li className="_item">
+                        <a href="#" className="_link">
+                          クッキーポリシー
+                        </a>
+                      </li>
+                      <li className="_item">
+                        <a href="#" className="_link">
+                          サイトマップ
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="_item">
+                    <a href="#" className="_link">
+                      お問い合わせ
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="sns">
+            <a href="#" className="_link">
+              <FontAwesomeIcon icon={faYoutube} />
+              <i className="fa-brands fa-youtube fa-2xl"></i>
+            </a>
+            <a href="#" className="_link">
+              <FontAwesomeIcon icon={faInstagram} />{" "}
+            </a>
+            <a href="#" className="_link">
+              <FontAwesomeIcon icon={faTwitter} />{" "}
+            </a>
+            <a href="#" className="_link">
+              <FontAwesomeIcon icon={faFacebookF} />{" "}
+              <i className="fa-brands fa-facebook fa-2xl"></i>
+            </a>
+          </div>
+
+          <div className="copyright">&copy; 2023 DGSHAPE Corporation</div>
+        </footer>
+      </body>
     </html>
   );
 }
